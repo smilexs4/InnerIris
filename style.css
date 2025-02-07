@@ -1,0 +1,116 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+#tsparticles {
+  position: relative;
+}
+
+.page {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.image-container {
+  animation: pulse 2s infinite;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  pointer-events: none;
+}
+
+img {
+  width: max(480px, 50vw);
+  clip-path: circle(35% at 50.3% 49.5%);
+  clip-path: circle(35% at 50.3% 49.5%);
+  animation: expandCircle 2s cubic-bezier(0.1, 1.14, 0, 0.2) forwards;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  mask-image: radial-gradient(circle at center, transparent 30px, black 40px);
+}
+
+@keyframes expandCircle {
+  0% {
+    clip-path: circle(8% at 50.3% 49.5%);
+  }
+  100% {
+    clip-path: circle(35% at 50.3% 49.5%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.title-container {
+  text-align: center;
+  font-size: 1rem;
+  background: linear-gradient(0deg, transparent 0%, rgba(245, 222, 179, 0.2) 67%, transparent 100%);
+}
+
+.company {
+  font-size: 3rem;
+  color: wheat;
+  text-shadow: black 2px 5px;
+  margin-bottom: 0;
+  margin-top: 1.8rem;
+}
+
+.spec {
+  font-size: 1.4rem;
+  color: wheat;
+  text-shadow: black 2px 5px;
+  margin-top: 0;
+}
+
+.motto {
+  font-size: 1.1rem;
+  color: wheat;
+  font-family: Papyrus, fantasy;
+}
+
+a {
+  text-decoration: none;
+  color: wheat;
+  text-shadow: black 2px 2px;
+}
+
+.arrow-container {
+  color: wheat;
+  font-size: 3rem;
+  animation: pulse 2s infinite;
+  margin-bottom: auto;
+}
+
+.arrow-container i {
+  text-shadow: wheat 0px 0 40px;
+}
+
+.checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-shadow: wheat 0px 0 30px;
+}
